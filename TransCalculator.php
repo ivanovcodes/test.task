@@ -4,7 +4,8 @@
  * Расчет стоимости доставки груза по перевозчикам.
  * Архитектура подразумевает рост количества перевозчиков со временем и добавление новых алгоритмов расчета другими программистами.
  *
- * @author Иванов Владимир <development@ivanov.site>
+ * @see https://github.com/ivanovsite/test.task/tree/TransCalculator
+ * @author Иванов Владимир <development@ivanov.site> 
  *
  */
 
