@@ -21,7 +21,7 @@ class TransCalculator
 	public function calculate($weight)
 	{
 		//$weight++;
-		return $this->post->calculate($weight);
+		return $this->post->calculate(intval($weight));
 	}
 }
 
@@ -33,13 +33,14 @@ interface TransInterface
 class PostRussia implements TransInterface 
 {
 	public function calculate($weight){
-		return $weight + 1;
+		if ($weight > 10) return 1000;
+		return 100;
 	}
 }
 
 class PostDHL implements TransInterface 
 {
 	public function calculate($weight){
-		return $weight - 1;
+		return $weight * 100;
 	}
 }
