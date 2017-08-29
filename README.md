@@ -20,6 +20,6 @@ git clone git@github.com:ivanovsite/test.task.git
 cd ./test.task
 git checkout TransCalculator
 php -S 127.0.0.1:8000
+http://127.0.0.1:8000/?weight=100 _(где weight - масса груза)_
 ```
-[http://127.0.0.1:8000/?weight=100](http://127.0.0.1:8000/?weight=100)
-_(где weight - масса груза)_
+[ДЕМО](http://ivanov.site/demo/tc/?weight=100)
