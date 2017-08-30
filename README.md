@@ -11,6 +11,9 @@
 
 ## Решение задачи - быстрый старт
 
+**Структура БД.**
+![Image](https://drive.google.com/open?id=0B41f4__rVb_EUV96LWhFNnpBVWc)
+
 ```
 git clone git@github.com:ivanovsite/test.task.git
 cd ./test.task
