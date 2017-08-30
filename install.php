@@ -3,13 +3,13 @@
  * Тестовое задание # 2
  * Работа с подписчиками одного издания.
  *
- * @see https://github.com/ivanovsite/test.task/tree/TransCalculator
+ * @see https://github.com/ivanovsite/test.task/tree/BookEdition
  * @author Иванов Владимир <development@ivanov.site> 
  *
  */
 
 $in = parse_ini_file('config.ini', true);
-$db = mysqli_connect($in['db']['host'], $in['db']['user'], $in['db']['password'], $in['db']['dbname']) or die('You need import SQL file data/dump.sql into mysql');
+$db = mysqli_connect($in['db']['host'], $in['db']['user'], $in['db']['password'], $in['db']['dbname']) or die('You need manual import SQL file data/dump.sql into mysql');
 mysqli_query($db, 'set names utf8');
 mysqli_query($db, 'TRUNCATE tbl_readers;');
 mysqli_query($db, 'TRUNCATE tbl_editions;');
