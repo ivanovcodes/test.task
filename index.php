@@ -1,29 +1,30 @@
 <?php
 /**
- * Тестовое задание # 1
- * Расчет стоимости доставки груза по перевозчикам.
- * Архитектура подразумевает рост количества перевозчиков со временем и добавление новых алгоритмов расчета другими программистами.
+ * Тестовое задание # 2
+ * Работа с подписчиками одного издания.
  *
  * @see https://github.com/ivanovsite/test.task/tree/TransCalculator
  * @author Иванов Владимир <development@ivanov.site> 
  *
  */
 
-require('TransCalculator.php'); 
+$edition = $_GET['edition'] ? $_GET['edition'] : 'Мурзилка';
 
-$weight = $_GET['weight'] ? $_GET['weight'] : 0;
+$in = parse_ini_file('config.ini', true);
+$db = mysqli_connect($in['db']['host'], $in['db']['user'], $in['db']['password'], $in['db']['dbname']) or require('install.php'); 
+mysqli_query($db, 'set names utf8');
+mysqli_query($db, "SET sql_mode = ''");
 
-$obj = new TransCalculator;
+$result = mysqli_query($db, "
+	SELECT tbl_editions.title, COUNT(*) AS readers FROM tbl_subscriptions LEFT JOIN tbl_editions ON tbl_editions.id = tbl_subscriptions.id_edition WHERE tbl_editions.title LIKE '%".$edition."%' GROUP BY tbl_subscriptions.id_edition LIMIT 1;
+");
+$row = mysqli_fetch_array($result);
+print_r('Всего на журнал: '.$row['title'].' подписано '.$row['readers'].' читателей');
 
-$obj->setPost(new PostRussia);
-$result = $obj->calculate($weight);
-print_r('Cтоимости доставки "Почта России": '.$result);
+$result = mysqli_query($db, "
+	SELECT tbl_readers.id, tbl_readers.name FROM tbl_readers JOIN(SELECT RAND() * (SELECT MAX(id) FROM tbl_readers) AS last_id) AS r WHERE tbl_readers.id >= r.last_id ORDER BY tbl_readers.id ASC LIMIT 1;
+");
+$row = mysqli_fetch_array($result);
+print_r(', а это наш любимый читатель: '.$row['name'].' [#'.$row['id'].']');
 
-$obj->setPost(new PostDHL);
-$result = $obj->calculate($weight);
-print_r(', а стоимость доставки "DHL": '.$result);
-
-/* 
- * Альтернативный расчет по конкретному перевозчику:
- * $result = new PostRussia;
- * var_dump($result->calculate($weight)); */
+mysqli_close($db);
