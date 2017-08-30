@@ -12,6 +12,7 @@
 ## Решение задачи - быстрый старт
 
 **Структура БД.**
+
 ![](https://lh5.googleusercontent.com/8mobwi3suqCbRU2eGPMwIMSH4Z4wxGWbnEN48TPyb7jAqvQ78WLtkkkQP0LV3hxFM6qUr8zcnHbdczo=w1223-h938)
 
 ```
