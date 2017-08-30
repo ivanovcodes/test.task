@@ -12,9 +12,7 @@
 ## Решение задачи - быстрый старт
 
 **Структура БД.**
-![Image of Yaktocat]
-(https://lh5.googleusercontent.com/8mobwi3suqCbRU2eGPMwIMSH4Z4wxGWbnEN48TPyb7jAqvQ78WLtkkkQP0LV3hxFM6qUr8zcnHbdczo=w1223-h938)
-
+![](https://lh5.googleusercontent.com/8mobwi3suqCbRU2eGPMwIMSH4Z4wxGWbnEN48TPyb7jAqvQ78WLtkkkQP0LV3hxFM6qUr8zcnHbdczo=w1223-h938)
 
 ```
 git clone git@github.com:ivanovsite/test.task.git
