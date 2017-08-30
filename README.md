@@ -12,7 +12,8 @@
 ## Решение задачи - быстрый старт
 
 **Структура БД.**
-![Image](https://drive.google.com/open?id=0B41f4__rVb_EUV96LWhFNnpBVWc)
+(https://lh5.googleusercontent.com/8mobwi3suqCbRU2eGPMwIMSH4Z4wxGWbnEN48TPyb7jAqvQ78WLtkkkQP0LV3hxFM6qUr8zcnHbdczo=w1223-h938)
+
 
 ```
 git clone git@github.com:ivanovsite/test.task.git
