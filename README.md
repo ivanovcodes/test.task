@@ -13,7 +13,7 @@
 
 **Структура БД.**
 
-![](https://lh5.googleusercontent.com/8mobwi3suqCbRU2eGPMwIMSH4Z4wxGWbnEN48TPyb7jAqvQ78WLtkkkQP0LV3hxFM6qUr8zcnHbdczo=w1223-h938)
+![](http://cloud.agak.ru/index.php/apps/files_sharing/ajax/publicpreview.php?x=1223&y=889&a=true&file=BookEdition.jpg&t=CMDiEFfK7nJi7py&scalingup=0)
 
 ```
 git clone git@github.com:ivanovsite/test.task.git
