@@ -13,18 +13,19 @@ require('AdsViewer.class.php');
 
 $result = [];
 $Ads = new AdsViewer;
+$Ads->logger = true;
 
-($_GET['id'] ? $id = $_GET['id'] : $result['response'] = 'unknown id ads');
-($_GET['from'] ? $id = $_GET['from'] : $result['response'] = 'unknown source ads');
+($_GET['id'] ? '' : $result['response'] = 'unknown id ads');
+($_GET['from'] ? '' : $result['response'] = 'unknown source ads');
 
 switch ($_GET['from']) {
     case "Mysql":
         $Ads->setSource(new Mysql);
-        $result = $Ads->getAds($id);
+        $result = $Ads->getAds($_GET['id']);
         break;
     case "Daemon":
         $Ads->setSource(new Daemon);
-        $result = $Ads->getAds($id);
+        $result = $Ads->getAds($_GET['id']);
         break;
 }
 

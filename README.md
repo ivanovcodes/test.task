@@ -63,14 +63,14 @@ $logger->log('log message');
 НЕ надо прикручивать MVC. Простой скрипт, который показывает как работает система.
 для запроса /?id=1&from=Mysql
 ответ:
-<h1>AdName_FromMySQL</h1>
-<p>AdText_FromMySQL</p>
-<p>стоимость: Х руб</p>
+AdName_FromMySQL
+AdText_FromMySQL
+стоимость: Х руб
 для запроса /?id=1&from=Daemon
 ответ:
-<h1>AdName_FromDaemon</h1>
-<p>AdText_FromDaemon</p>
-<p>стоимость: Х руб</p>
+AdName_FromDaemon
+AdText_FromDaemon
+стоимость: Х руб
 Если какая-то часть задания вам не понятна или требует уточнения - сделайте так как вы это поняли и оставьте комментарий.
 
 
