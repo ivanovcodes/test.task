@@ -81,10 +81,10 @@ git clone git@github.com:ivanovsite/test.task.git
 cd ./test.task
 git checkout AdsViewer
 php -S 127.0.0.1:8000
-http://127.0.0.1:8000/?id=1&from=Mysql 
+http://127.0.0.1:8000/?id=1&from=Mysql (Mysql или Daemon)
 ```
-[ДЕМО](http://ivanov.site/demo/adsviewer/?id=1&from=Mysql)
-
+[See Demo](http://ivanov.site/demo/adsviewer/?id=1&from=Mysql)
+[See Log](http://ivanov.site/demo/adsviewer/log.txt)
 
 
 
