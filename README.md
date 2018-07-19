@@ -79,7 +79,7 @@ AdText_FromDaemon
 ```
 git clone git@github.com:ivanovsite/test.task.git
 cd ./test.task
-git checkout AdsViewer
+git checkout usend-ads
 php -S 127.0.0.1:8000
 http://127.0.0.1:8000/?id=1&from=Mysql (Mysql или Daemon)
 ```
