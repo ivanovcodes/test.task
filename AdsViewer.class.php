@@ -25,7 +25,7 @@ class AdsViewer
 		$log['dt'] = date('Y-m-d H:i:s', mktime(date("H"), date("i"), date("s"), date("m"), date("d"), date("Y")));
 		$log['function'] =__CLASS__.".".__FUNCTION__;
 		$log['ad-id'] = $id;
-		if($this->logger) file_put_contents('log.txt', json_encode($log)."\r\n", FILE_APPEND);				
+		if($this->logger) file_put_contents('log.txt', str_replace(array('{', '}'), ' ', json_encode($log))."\r\n", FILE_APPEND);
 		return array_merge($this->post->getAds(intval($id)), array('logger'=>$this->logger));
 	}
 }
